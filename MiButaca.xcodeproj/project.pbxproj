@@ -1,0 +1,915 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07F34817B7B010FF2C1F333A /* Pods_MiButaca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836AF16CBDA25674EBD05178 /* Pods_MiButaca.framework */; };
+		4AD1AC84CFB430D836D54400 /* Pods_MiButacaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065A39FF94C49D5DEE1AE714 /* Pods_MiButacaUITests.framework */; };
+		C3659F1F1FE7DCF1002EB461 /* movies.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C3659F1D1FE7DCF0002EB461 /* movies.jpeg */; };
+		C3659F201FE7DCF1002EB461 /* TV-Shows.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3659F1E1FE7DCF1002EB461 /* TV-Shows.jpg */; };
+		C3659F221FE7DDC3002EB461 /* proyector.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3659F211FE7DDC3002EB461 /* proyector.jpg */; };
+		C3659F241FE7DF3B002EB461 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3659F231FE7DF3B002EB461 /* HomeViewController.swift */; };
+		C3659F281FE7DFB3002EB461 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3659F271FE7DFB3002EB461 /* Constants.swift */; };
+		C3659F2A1FE8064B002EB461 /* user_male2-512.png in Resources */ = {isa = PBXBuildFile; fileRef = C3659F291FE8064B002EB461 /* user_male2-512.png */; };
+		C3659F2C1FE8076E002EB461 /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = C3659F2B1FE8076D002EB461 /* logout.png */; };
+		C3659F2E1FE81DA4002EB461 /* star.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C3659F2D1FE81DA3002EB461 /* star.jpeg */; };
+		C3659F301FE82040002EB461 /* MoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3659F2F1FE82040002EB461 /* MoviesTableViewCell.swift */; };
+		C3659F331FE8229C002EB461 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3659F321FE8229C002EB461 /* MoviesTableViewController.swift */; };
+		C3659F351FE826EA002EB461 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3659F341FE826EA002EB461 /* Movie.swift */; };
+		C3659F371FE90D05002EB461 /* MoviesTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3659F361FE90D05002EB461 /* MoviesTableController.swift */; };
+		C3659F391FE92668002EB461 /* noImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3659F381FE92667002EB461 /* noImage.jpg */; };
+		C3659F3B1FE948BD002EB461 /* CoreDataManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3659F3A1FE948BD002EB461 /* CoreDataManage.swift */; };
+		EE4DB1687260A711272F6EBB /* Pods_MiButacaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47782201FAD7417E9EFB6DBF /* Pods_MiButacaTests.framework */; };
+		F37B7FD71FD93FB400558E5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B7FD61FD93FB400558E5E /* AppDelegate.swift */; };
+		F37B7FDC1FD93FB400558E5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F37B7FDA1FD93FB400558E5E /* Main.storyboard */; };
+		F37B7FDF1FD93FB400558E5E /* MiButaca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F37B7FDD1FD93FB400558E5E /* MiButaca.xcdatamodeld */; };
+		F37B7FE11FD93FB400558E5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F37B7FE01FD93FB400558E5E /* Assets.xcassets */; };
+		F37B7FE41FD93FB400558E5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F37B7FE21FD93FB400558E5E /* LaunchScreen.storyboard */; };
+		F37B7FEF1FD93FB400558E5E /* MiButacaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B7FEE1FD93FB400558E5E /* MiButacaTests.swift */; };
+		F37B7FFA1FD93FB400558E5E /* MiButacaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B7FF91FD93FB400558E5E /* MiButacaUITests.swift */; };
+		F37B80091FD9413C00558E5E /* butaca.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F37B80081FD9413C00558E5E /* butaca.jpg */; };
+		F37B800B1FD9439600558E5E /* butaca2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F37B800A1FD9439600558E5E /* butaca2.jpg */; };
+		F37B800E1FD955FB00558E5E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B800D1FD955FB00558E5E /* LoginViewController.swift */; };
+		F37B80101FD958EC00558E5E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B800F1FD958EC00558E5E /* Extensions.swift */; };
+		F37B80121FD95FD900558E5E /* icons8-user-32.png in Resources */ = {isa = PBXBuildFile; fileRef = F37B80111FD95FD900558E5E /* icons8-user-32.png */; };
+		F37B80141FD9813500558E5E /* userIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F37B80131FD9813500558E5E /* userIcon.png */; };
+		F37B80161FD985B800558E5E /* icons8-lock-32.png in Resources */ = {isa = PBXBuildFile; fileRef = F37B80151FD985B800558E5E /* icons8-lock-32.png */; };
+		F37B80181FD98A1F00558E5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F37B80171FD98A1F00558E5E /* GoogleService-Info.plist */; };
+		F37B801B1FD98F3900558E5E /* FirebaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B801A1FD98F3900558E5E /* FirebaseData.swift */; };
+		F37B801E1FD990DA00558E5E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B801D1FD990DA00558E5E /* LoginController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F37B7FEB1FD93FB400558E5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F37B7FCB1FD93FB400558E5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F37B7FD21FD93FB400558E5E;
+			remoteInfo = MiButaca;
+		};
+		F37B7FF61FD93FB400558E5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F37B7FCB1FD93FB400558E5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F37B7FD21FD93FB400558E5E;
+			remoteInfo = MiButaca;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0335992D50C5591CA9DA6121 /* Pods-MiButaca.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiButaca.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiButaca/Pods-MiButaca.release.xcconfig"; sourceTree = "<group>"; };
+		065A39FF94C49D5DEE1AE714 /* Pods_MiButacaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiButacaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47782201FAD7417E9EFB6DBF /* Pods_MiButacaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiButacaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F3CE5529F4C801C2B93F547 /* Pods-MiButacaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiButacaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiButacaTests/Pods-MiButacaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		836AF16CBDA25674EBD05178 /* Pods_MiButaca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiButaca.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9749CB0AE8309DCFBD84B395 /* Pods-MiButacaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiButacaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiButacaUITests/Pods-MiButacaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AE46DD4EEE6FDB4089D64057 /* Pods-MiButacaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiButacaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiButacaTests/Pods-MiButacaTests.release.xcconfig"; sourceTree = "<group>"; };
+		C3659F1D1FE7DCF0002EB461 /* movies.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = movies.jpeg; path = imagenes/movies.jpeg; sourceTree = SOURCE_ROOT; };
+		C3659F1E1FE7DCF1002EB461 /* TV-Shows.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "TV-Shows.jpg"; path = "imagenes/TV-Shows.jpg"; sourceTree = SOURCE_ROOT; };
+		C3659F211FE7DDC3002EB461 /* proyector.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = proyector.jpg; path = imagenes/proyector.jpg; sourceTree = SOURCE_ROOT; };
+		C3659F231FE7DF3B002EB461 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C3659F271FE7DFB3002EB461 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C3659F291FE8064B002EB461 /* user_male2-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "user_male2-512.png"; path = "imagenes/user_male2-512.png"; sourceTree = SOURCE_ROOT; };
+		C3659F2B1FE8076D002EB461 /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logout.png; path = imagenes/logout.png; sourceTree = SOURCE_ROOT; };
+		C3659F2D1FE81DA3002EB461 /* star.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = star.jpeg; path = imagenes/star.jpeg; sourceTree = SOURCE_ROOT; };
+		C3659F2F1FE82040002EB461 /* MoviesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewCell.swift; sourceTree = "<group>"; };
+		C3659F321FE8229C002EB461 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
+		C3659F341FE826EA002EB461 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		C3659F361FE90D05002EB461 /* MoviesTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableController.swift; sourceTree = "<group>"; };
+		C3659F381FE92667002EB461 /* noImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = noImage.jpg; path = imagenes/noImage.jpg; sourceTree = SOURCE_ROOT; };
+		C3659F3A1FE948BD002EB461 /* CoreDataManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManage.swift; sourceTree = "<group>"; };
+		C3990755CD1B6DCD3FE4E39F /* Pods-MiButaca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiButaca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiButaca/Pods-MiButaca.debug.xcconfig"; sourceTree = "<group>"; };
+		C8083973607ECBE8E672D1AD /* Pods-MiButacaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiButacaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiButacaUITests/Pods-MiButacaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F37B7FD31FD93FB400558E5E /* MiButaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiButaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F37B7FD61FD93FB400558E5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F37B7FDB1FD93FB400558E5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F37B7FDE1FD93FB400558E5E /* MiButaca.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MiButaca.xcdatamodel; sourceTree = "<group>"; };
+		F37B7FE01FD93FB400558E5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F37B7FE31FD93FB400558E5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F37B7FE51FD93FB400558E5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F37B7FEA1FD93FB400558E5E /* MiButacaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiButacaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F37B7FEE1FD93FB400558E5E /* MiButacaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiButacaTests.swift; sourceTree = "<group>"; };
+		F37B7FF01FD93FB400558E5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F37B7FF51FD93FB400558E5E /* MiButacaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiButacaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F37B7FF91FD93FB400558E5E /* MiButacaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiButacaUITests.swift; sourceTree = "<group>"; };
+		F37B7FFB1FD93FB400558E5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F37B80081FD9413C00558E5E /* butaca.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = butaca.jpg; path = imagenes/butaca.jpg; sourceTree = SOURCE_ROOT; };
+		F37B800A1FD9439600558E5E /* butaca2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = butaca2.jpg; path = imagenes/butaca2.jpg; sourceTree = SOURCE_ROOT; };
+		F37B800D1FD955FB00558E5E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F37B800F1FD958EC00558E5E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F37B80111FD95FD900558E5E /* icons8-user-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-user-32.png"; path = "imagenes/icons8-user-32.png"; sourceTree = SOURCE_ROOT; };
+		F37B80131FD9813500558E5E /* userIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = userIcon.png; path = imagenes/userIcon.png; sourceTree = SOURCE_ROOT; };
+		F37B80151FD985B800558E5E /* icons8-lock-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-lock-32.png"; path = "imagenes/icons8-lock-32.png"; sourceTree = SOURCE_ROOT; };
+		F37B80171FD98A1F00558E5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		F37B801A1FD98F3900558E5E /* FirebaseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseData.swift; sourceTree = "<group>"; };
+		F37B801D1FD990DA00558E5E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F37B7FD01FD93FB400558E5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07F34817B7B010FF2C1F333A /* Pods_MiButaca.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F37B7FE71FD93FB400558E5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE4DB1687260A711272F6EBB /* Pods_MiButacaTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F37B7FF21FD93FB400558E5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AD1AC84CFB430D836D54400 /* Pods_MiButacaUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		78BA550433CA2A5F086D0730 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3990755CD1B6DCD3FE4E39F /* Pods-MiButaca.debug.xcconfig */,
+				0335992D50C5591CA9DA6121 /* Pods-MiButaca.release.xcconfig */,
+				6F3CE5529F4C801C2B93F547 /* Pods-MiButacaTests.debug.xcconfig */,
+				AE46DD4EEE6FDB4089D64057 /* Pods-MiButacaTests.release.xcconfig */,
+				9749CB0AE8309DCFBD84B395 /* Pods-MiButacaUITests.debug.xcconfig */,
+				C8083973607ECBE8E672D1AD /* Pods-MiButacaUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C3659F311FE82261002EB461 /* moviesTable */ = {
+			isa = PBXGroup;
+			children = (
+				C3659F2F1FE82040002EB461 /* MoviesTableViewCell.swift */,
+				C3659F321FE8229C002EB461 /* MoviesTableViewController.swift */,
+			);
+			path = moviesTable;
+			sourceTree = "<group>";
+		};
+		EEF436F497A23B2AB7F71314 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				836AF16CBDA25674EBD05178 /* Pods_MiButaca.framework */,
+				47782201FAD7417E9EFB6DBF /* Pods_MiButacaTests.framework */,
+				065A39FF94C49D5DEE1AE714 /* Pods_MiButacaUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F37B7FCA1FD93FB400558E5E = {
+			isa = PBXGroup;
+			children = (
+				F37B7FD51FD93FB400558E5E /* MiButaca */,
+				F37B7FED1FD93FB400558E5E /* MiButacaTests */,
+				F37B7FF81FD93FB400558E5E /* MiButacaUITests */,
+				F37B7FD41FD93FB400558E5E /* Products */,
+				78BA550433CA2A5F086D0730 /* Pods */,
+				EEF436F497A23B2AB7F71314 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F37B7FD41FD93FB400558E5E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F37B7FD31FD93FB400558E5E /* MiButaca.app */,
+				F37B7FEA1FD93FB400558E5E /* MiButacaTests.xctest */,
+				F37B7FF51FD93FB400558E5E /* MiButacaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F37B7FD51FD93FB400558E5E /* MiButaca */ = {
+			isa = PBXGroup;
+			children = (
+				F37B80191FD98EF600558E5E /* model */,
+				F37B801C1FD990BE00558E5E /* controller */,
+				F37B800C1FD955D600558E5E /* view */,
+				F37B80071FD9410E00558E5E /* images */,
+				F37B7FD61FD93FB400558E5E /* AppDelegate.swift */,
+				F37B7FDA1FD93FB400558E5E /* Main.storyboard */,
+				F37B7FE01FD93FB400558E5E /* Assets.xcassets */,
+				F37B7FE21FD93FB400558E5E /* LaunchScreen.storyboard */,
+				F37B7FE51FD93FB400558E5E /* Info.plist */,
+				F37B800F1FD958EC00558E5E /* Extensions.swift */,
+				C3659F271FE7DFB3002EB461 /* Constants.swift */,
+				F37B80171FD98A1F00558E5E /* GoogleService-Info.plist */,
+			);
+			path = MiButaca;
+			sourceTree = "<group>";
+		};
+		F37B7FED1FD93FB400558E5E /* MiButacaTests */ = {
+			isa = PBXGroup;
+			children = (
+				F37B7FEE1FD93FB400558E5E /* MiButacaTests.swift */,
+				F37B7FF01FD93FB400558E5E /* Info.plist */,
+			);
+			path = MiButacaTests;
+			sourceTree = "<group>";
+		};
+		F37B7FF81FD93FB400558E5E /* MiButacaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F37B7FF91FD93FB400558E5E /* MiButacaUITests.swift */,
+				F37B7FFB1FD93FB400558E5E /* Info.plist */,
+			);
+			path = MiButacaUITests;
+			sourceTree = "<group>";
+		};
+		F37B80071FD9410E00558E5E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C3659F381FE92667002EB461 /* noImage.jpg */,
+				C3659F2D1FE81DA3002EB461 /* star.jpeg */,
+				C3659F2B1FE8076D002EB461 /* logout.png */,
+				C3659F291FE8064B002EB461 /* user_male2-512.png */,
+				C3659F211FE7DDC3002EB461 /* proyector.jpg */,
+				C3659F1D1FE7DCF0002EB461 /* movies.jpeg */,
+				C3659F1E1FE7DCF1002EB461 /* TV-Shows.jpg */,
+				F37B80151FD985B800558E5E /* icons8-lock-32.png */,
+				F37B80131FD9813500558E5E /* userIcon.png */,
+				F37B80111FD95FD900558E5E /* icons8-user-32.png */,
+				F37B800A1FD9439600558E5E /* butaca2.jpg */,
+				F37B80081FD9413C00558E5E /* butaca.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		F37B800C1FD955D600558E5E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F37B800D1FD955FB00558E5E /* LoginViewController.swift */,
+				C3659F231FE7DF3B002EB461 /* HomeViewController.swift */,
+				C3659F311FE82261002EB461 /* moviesTable */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		F37B80191FD98EF600558E5E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				F37B801A1FD98F3900558E5E /* FirebaseData.swift */,
+				C3659F341FE826EA002EB461 /* Movie.swift */,
+				C3659F3A1FE948BD002EB461 /* CoreDataManage.swift */,
+				F37B7FDD1FD93FB400558E5E /* MiButaca.xcdatamodeld */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		F37B801C1FD990BE00558E5E /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				F37B801D1FD990DA00558E5E /* LoginController.swift */,
+				C3659F361FE90D05002EB461 /* MoviesTableController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F37B7FD21FD93FB400558E5E /* MiButaca */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F37B7FFE1FD93FB400558E5E /* Build configuration list for PBXNativeTarget "MiButaca" */;
+			buildPhases = (
+				D96C084EF7462244D3B911F6 /* [CP] Check Pods Manifest.lock */,
+				F37B7FCF1FD93FB400558E5E /* Sources */,
+				F37B7FD01FD93FB400558E5E /* Frameworks */,
+				F37B7FD11FD93FB400558E5E /* Resources */,
+				2E681DB7151261A52FCE1892 /* [CP] Embed Pods Frameworks */,
+				343F782C0DA9A907EDFAE803 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiButaca;
+			productName = MiButaca;
+			productReference = F37B7FD31FD93FB400558E5E /* MiButaca.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F37B7FE91FD93FB400558E5E /* MiButacaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F37B80011FD93FB400558E5E /* Build configuration list for PBXNativeTarget "MiButacaTests" */;
+			buildPhases = (
+				E1A5869685758428AC039036 /* [CP] Check Pods Manifest.lock */,
+				F37B7FE61FD93FB400558E5E /* Sources */,
+				F37B7FE71FD93FB400558E5E /* Frameworks */,
+				F37B7FE81FD93FB400558E5E /* Resources */,
+				81A4F8EA592BDAF49F7D8094 /* [CP] Embed Pods Frameworks */,
+				595AA112E849DB3D16536E7B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F37B7FEC1FD93FB400558E5E /* PBXTargetDependency */,
+			);
+			name = MiButacaTests;
+			productName = MiButacaTests;
+			productReference = F37B7FEA1FD93FB400558E5E /* MiButacaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F37B7FF41FD93FB400558E5E /* MiButacaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F37B80041FD93FB400558E5E /* Build configuration list for PBXNativeTarget "MiButacaUITests" */;
+			buildPhases = (
+				DC17F617502858ACFA15E2A6 /* [CP] Check Pods Manifest.lock */,
+				F37B7FF11FD93FB400558E5E /* Sources */,
+				F37B7FF21FD93FB400558E5E /* Frameworks */,
+				F37B7FF31FD93FB400558E5E /* Resources */,
+				8A7BC07A49F18923BDC6FCED /* [CP] Embed Pods Frameworks */,
+				5CCA3119E01D776BF9D31834 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F37B7FF71FD93FB400558E5E /* PBXTargetDependency */,
+			);
+			name = MiButacaUITests;
+			productName = MiButacaUITests;
+			productReference = F37B7FF51FD93FB400558E5E /* MiButacaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F37B7FCB1FD93FB400558E5E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Leticia;
+				TargetAttributes = {
+					F37B7FD21FD93FB400558E5E = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					F37B7FE91FD93FB400558E5E = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F37B7FD21FD93FB400558E5E;
+					};
+					F37B7FF41FD93FB400558E5E = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F37B7FD21FD93FB400558E5E;
+					};
+				};
+			};
+			buildConfigurationList = F37B7FCE1FD93FB400558E5E /* Build configuration list for PBXProject "MiButaca" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F37B7FCA1FD93FB400558E5E;
+			productRefGroup = F37B7FD41FD93FB400558E5E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F37B7FD21FD93FB400558E5E /* MiButaca */,
+				F37B7FE91FD93FB400558E5E /* MiButacaTests */,
+				F37B7FF41FD93FB400558E5E /* MiButacaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F37B7FD11FD93FB400558E5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F37B7FE41FD93FB400558E5E /* LaunchScreen.storyboard in Resources */,
+				F37B80161FD985B800558E5E /* icons8-lock-32.png in Resources */,
+				F37B80181FD98A1F00558E5E /* GoogleService-Info.plist in Resources */,
+				F37B80141FD9813500558E5E /* userIcon.png in Resources */,
+				F37B80091FD9413C00558E5E /* butaca.jpg in Resources */,
+				C3659F201FE7DCF1002EB461 /* TV-Shows.jpg in Resources */,
+				F37B7FE11FD93FB400558E5E /* Assets.xcassets in Resources */,
+				C3659F1F1FE7DCF1002EB461 /* movies.jpeg in Resources */,
+				F37B80121FD95FD900558E5E /* icons8-user-32.png in Resources */,
+				F37B800B1FD9439600558E5E /* butaca2.jpg in Resources */,
+				C3659F391FE92668002EB461 /* noImage.jpg in Resources */,
+				F37B7FDC1FD93FB400558E5E /* Main.storyboard in Resources */,
+				C3659F2C1FE8076E002EB461 /* logout.png in Resources */,
+				C3659F221FE7DDC3002EB461 /* proyector.jpg in Resources */,
+				C3659F2E1FE81DA4002EB461 /* star.jpeg in Resources */,
+				C3659F2A1FE8064B002EB461 /* user_male2-512.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F37B7FE81FD93FB400558E5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F37B7FF31FD93FB400558E5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E681DB7151261A52FCE1892 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MiButaca/Pods-MiButaca-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiButaca/Pods-MiButaca-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		343F782C0DA9A907EDFAE803 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiButaca/Pods-MiButaca-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		595AA112E849DB3D16536E7B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiButacaTests/Pods-MiButacaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CCA3119E01D776BF9D31834 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiButacaUITests/Pods-MiButacaUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81A4F8EA592BDAF49F7D8094 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiButacaTests/Pods-MiButacaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A7BC07A49F18923BDC6FCED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiButacaUITests/Pods-MiButacaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D96C084EF7462244D3B911F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MiButaca-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC17F617502858ACFA15E2A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MiButacaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1A5869685758428AC039036 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MiButacaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F37B7FCF1FD93FB400558E5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3659F301FE82040002EB461 /* MoviesTableViewCell.swift in Sources */,
+				C3659F371FE90D05002EB461 /* MoviesTableController.swift in Sources */,
+				F37B80101FD958EC00558E5E /* Extensions.swift in Sources */,
+				C3659F3B1FE948BD002EB461 /* CoreDataManage.swift in Sources */,
+				F37B801E1FD990DA00558E5E /* LoginController.swift in Sources */,
+				F37B800E1FD955FB00558E5E /* LoginViewController.swift in Sources */,
+				F37B7FDF1FD93FB400558E5E /* MiButaca.xcdatamodeld in Sources */,
+				F37B801B1FD98F3900558E5E /* FirebaseData.swift in Sources */,
+				C3659F241FE7DF3B002EB461 /* HomeViewController.swift in Sources */,
+				F37B7FD71FD93FB400558E5E /* AppDelegate.swift in Sources */,
+				C3659F331FE8229C002EB461 /* MoviesTableViewController.swift in Sources */,
+				C3659F351FE826EA002EB461 /* Movie.swift in Sources */,
+				C3659F281FE7DFB3002EB461 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F37B7FE61FD93FB400558E5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F37B7FEF1FD93FB400558E5E /* MiButacaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F37B7FF11FD93FB400558E5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F37B7FFA1FD93FB400558E5E /* MiButacaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F37B7FEC1FD93FB400558E5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F37B7FD21FD93FB400558E5E /* MiButaca */;
+			targetProxy = F37B7FEB1FD93FB400558E5E /* PBXContainerItemProxy */;
+		};
+		F37B7FF71FD93FB400558E5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F37B7FD21FD93FB400558E5E /* MiButaca */;
+			targetProxy = F37B7FF61FD93FB400558E5E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F37B7FDA1FD93FB400558E5E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F37B7FDB1FD93FB400558E5E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F37B7FE21FD93FB400558E5E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F37B7FE31FD93FB400558E5E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F37B7FFC1FD93FB400558E5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F37B7FFD1FD93FB400558E5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F37B7FFF1FD93FB400558E5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3990755CD1B6DCD3FE4E39F /* Pods-MiButaca.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiButaca/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MiButaca;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F37B80001FD93FB400558E5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0335992D50C5591CA9DA6121 /* Pods-MiButaca.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiButaca/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MiButaca;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F37B80021FD93FB400558E5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F3CE5529F4C801C2B93F547 /* Pods-MiButacaTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiButacaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = example.MiButacaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiButaca.app/MiButaca";
+			};
+			name = Debug;
+		};
+		F37B80031FD93FB400558E5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE46DD4EEE6FDB4089D64057 /* Pods-MiButacaTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiButacaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = example.MiButacaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiButaca.app/MiButaca";
+			};
+			name = Release;
+		};
+		F37B80051FD93FB400558E5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9749CB0AE8309DCFBD84B395 /* Pods-MiButacaUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiButacaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = example.MiButacaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MiButaca;
+			};
+			name = Debug;
+		};
+		F37B80061FD93FB400558E5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8083973607ECBE8E672D1AD /* Pods-MiButacaUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiButacaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = example.MiButacaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MiButaca;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F37B7FCE1FD93FB400558E5E /* Build configuration list for PBXProject "MiButaca" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F37B7FFC1FD93FB400558E5E /* Debug */,
+				F37B7FFD1FD93FB400558E5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F37B7FFE1FD93FB400558E5E /* Build configuration list for PBXNativeTarget "MiButaca" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F37B7FFF1FD93FB400558E5E /* Debug */,
+				F37B80001FD93FB400558E5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F37B80011FD93FB400558E5E /* Build configuration list for PBXNativeTarget "MiButacaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F37B80021FD93FB400558E5E /* Debug */,
+				F37B80031FD93FB400558E5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F37B80041FD93FB400558E5E /* Build configuration list for PBXNativeTarget "MiButacaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F37B80051FD93FB400558E5E /* Debug */,
+				F37B80061FD93FB400558E5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F37B7FDD1FD93FB400558E5E /* MiButaca.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F37B7FDE1FD93FB400558E5E /* MiButaca.xcdatamodel */,
+			);
+			currentVersion = F37B7FDE1FD93FB400558E5E /* MiButaca.xcdatamodel */;
+			path = MiButaca.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F37B7FCB1FD93FB400558E5E /* Project object */;
+}
