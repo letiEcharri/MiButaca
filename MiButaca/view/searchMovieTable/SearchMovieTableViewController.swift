@@ -24,6 +24,9 @@ class SearchMovieTableViewController: UITableViewController, UISearchBarDelegate
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let spinner: SpinnerProtocol = Spinner(superView: self)
+        spinner.createSubviewSpinner()
+        
         let text: String = searchBar.text!
         
         let controller: SearchMovieProtocol! = SearchMovieController(view: self)
@@ -32,6 +35,10 @@ class SearchMovieTableViewController: UITableViewController, UISearchBarDelegate
     
     func reloadData(movies: [Movie]){
         self.movies = movies
+        
+        let spinner: SpinnerProtocol = Spinner(superView: self)
+        spinner.stopSpinner()
+        
         tableView.reloadData()
     }
     

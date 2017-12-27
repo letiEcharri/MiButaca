@@ -24,6 +24,9 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func moviesAction(_ sender: CustomHomeButton) {
+        let spinner: SpinnerProtocol = Spinner(superView: self)
+        spinner.createSubviewSpinner()
+        
         let coredata: CoreDataProtocol = CoreDataManage()
         coredata.deleteAllRecords(entity: Constants.coredataEntities.movies)
         
@@ -47,6 +50,8 @@ class HomeViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.segue.HomeToMovies{
+            let spinner: SpinnerProtocol = Spinner(superView: self)
+            spinner.stopSpinner()
         }
     }
 

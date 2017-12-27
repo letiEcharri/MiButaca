@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		07F34817B7B010FF2C1F333A /* Pods_MiButaca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836AF16CBDA25674EBD05178 /* Pods_MiButaca.framework */; };
 		4AD1AC84CFB430D836D54400 /* Pods_MiButacaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065A39FF94C49D5DEE1AE714 /* Pods_MiButacaUITests.framework */; };
+		C345827D1FF39BBE00FE518F /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C345827C1FF39BBE00FE518F /* Spinner.swift */; };
 		C35064521FEBAB550010617B /* SearchMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35064511FEBAB550010617B /* SearchMovieTableViewCell.swift */; };
 		C35064541FEBBBD10010617B /* SearchMovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35064531FEBBBD10010617B /* SearchMovieTableViewController.swift */; };
 		C35064561FEBC3790010617B /* SearchMovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35064551FEBC3790010617B /* SearchMovieController.swift */; };
@@ -73,6 +74,7 @@
 		836AF16CBDA25674EBD05178 /* Pods_MiButaca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiButaca.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9749CB0AE8309DCFBD84B395 /* Pods-MiButacaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiButacaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiButacaUITests/Pods-MiButacaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE46DD4EEE6FDB4089D64057 /* Pods-MiButacaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiButacaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiButacaTests/Pods-MiButacaTests.release.xcconfig"; sourceTree = "<group>"; };
+		C345827C1FF39BBE00FE518F /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		C35064511FEBAB550010617B /* SearchMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieTableViewCell.swift; sourceTree = "<group>"; };
 		C35064531FEBBBD10010617B /* SearchMovieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieTableViewController.swift; sourceTree = "<group>"; };
 		C35064551FEBC3790010617B /* SearchMovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C345827B1FF39B8F00FE518F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F37B800F1FD958EC00558E5E /* Extensions.swift */,
+				C3659F271FE7DFB3002EB461 /* Constants.swift */,
+				C345827C1FF39BBE00FE518F /* Spinner.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		C35064501FEBAB0E0010617B /* searchMovieTable */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +251,7 @@
 		F37B7FD51FD93FB400558E5E /* MiButaca */ = {
 			isa = PBXGroup;
 			children = (
+				C345827B1FF39B8F00FE518F /* Utils */,
 				F37B80191FD98EF600558E5E /* model */,
 				F37B801C1FD990BE00558E5E /* controller */,
 				F37B800C1FD955D600558E5E /* view */,
@@ -248,8 +261,6 @@
 				F37B7FE01FD93FB400558E5E /* Assets.xcassets */,
 				F37B7FE21FD93FB400558E5E /* LaunchScreen.storyboard */,
 				F37B7FE51FD93FB400558E5E /* Info.plist */,
-				F37B800F1FD958EC00558E5E /* Extensions.swift */,
-				C3659F271FE7DFB3002EB461 /* Constants.swift */,
 				F37B80171FD98A1F00558E5E /* GoogleService-Info.plist */,
 			);
 			path = MiButaca;
@@ -643,6 +654,7 @@
 				C3659F3B1FE948BD002EB461 /* CoreDataManage.swift in Sources */,
 				F37B801E1FD990DA00558E5E /* LoginController.swift in Sources */,
 				F37B800E1FD955FB00558E5E /* LoginViewController.swift in Sources */,
+				C345827D1FF39BBE00FE518F /* Spinner.swift in Sources */,
 				F37B7FDF1FD93FB400558E5E /* MiButaca.xcdatamodeld in Sources */,
 				C3622B801FEAC7C600012284 /* ItunesService.swift in Sources */,
 				F37B801B1FD98F3900558E5E /* FirebaseData.swift in Sources */,
