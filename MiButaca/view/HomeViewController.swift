@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         navigationController?.navigationBar.tintColor = UIColor.black
-        self.title = "MI BUTACA"
+        self.title = Constants.appName
     }
 
     @IBAction func logout(_ sender: UIBarButtonItem) {

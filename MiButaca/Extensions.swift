@@ -47,4 +47,8 @@ extension String{
         
         return myImage
     }
+    
+    func cleanSpaces() -> String{
+        return self.replacingOccurrences(of: " ", with: "+")
+    }
 }

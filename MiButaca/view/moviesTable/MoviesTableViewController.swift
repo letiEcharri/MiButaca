@@ -11,14 +11,19 @@ import UIKit
 class MoviesTableViewController: UITableViewController {
     
     var movies: [Movie] = [Movie]()
-    let cellName = "movieTableCell"
+    let cellName = Constants.cellsNames.movieCell
     
     override func viewWillAppear(_ animated: Bool) {
+        //Get movies from coredata
         let controller: MoviesTableProtocol = MoviesTableController(view: self)
         movies = controller.getMoviesFromDevice()
         
+        //Style backbutton
         let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: self, action: nil)
         navigationItem.backBarButtonItem = backButton
+        
+        //Add Search right button
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchAction(sender:)))
     }
     
     override func viewDidLoad() {
@@ -28,6 +33,12 @@ class MoviesTableViewController: UITableViewController {
         print("NUMERO FILAS: \(movies.count)")
         self.tableView.rowHeight = 100
         self.title = Constants.moviesName
+    }
+    
+    @objc func searchAction(sender: UIBarButtonItem){
+        DispatchQueue.main.async{
+            self.performSegue(withIdentifier: Constants.segue.MoviesToSearch, sender: nil)
+        }
     }
     
 

@@ -12,10 +12,12 @@ struct Constants {
     
     static let appName = "MI BUTACA"
     static let moviesName = "PELÍCULAS"
+    static let buscarPeli = "BUSCAR"
     
     struct segue {
         static let LoginToHome = "segueLoginToHome"
         static let HomeToMovies = "segueHomeToMovies"
+        static let MoviesToSearch = "segueMoviesToSearch"
     }
     
     struct userDefaults {
@@ -37,5 +39,15 @@ struct Constants {
     
     struct coredataEntities {
         static let movies = "MovieDC"
+    }
+    
+    struct itunes {
+        static let baseURL = "https://itunes.apple.com/search?"
+        static let entityMovieParam = "entity=movie"
+    }
+    
+    struct cellsNames {
+        static let movieCell = "movieTableCell"
+        static let movieSearchCell = "movieSearchTableCell"
     }
 }

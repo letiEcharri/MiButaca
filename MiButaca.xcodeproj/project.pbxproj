@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		07F34817B7B010FF2C1F333A /* Pods_MiButaca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836AF16CBDA25674EBD05178 /* Pods_MiButaca.framework */; };
 		4AD1AC84CFB430D836D54400 /* Pods_MiButacaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065A39FF94C49D5DEE1AE714 /* Pods_MiButacaUITests.framework */; };
+		C35064521FEBAB550010617B /* SearchMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35064511FEBAB550010617B /* SearchMovieTableViewCell.swift */; };
+		C35064541FEBBBD10010617B /* SearchMovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35064531FEBBBD10010617B /* SearchMovieTableViewController.swift */; };
+		C35064561FEBC3790010617B /* SearchMovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35064551FEBC3790010617B /* SearchMovieController.swift */; };
+		C350645A1FEBC64B0010617B /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35064591FEBC64B0010617B /* BaseController.swift */; };
+		C3622B801FEAC7C600012284 /* ItunesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3622B7F1FEAC7C600012284 /* ItunesService.swift */; };
 		C3659F1F1FE7DCF1002EB461 /* movies.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C3659F1D1FE7DCF0002EB461 /* movies.jpeg */; };
 		C3659F201FE7DCF1002EB461 /* TV-Shows.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3659F1E1FE7DCF1002EB461 /* TV-Shows.jpg */; };
 		C3659F221FE7DDC3002EB461 /* proyector.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3659F211FE7DDC3002EB461 /* proyector.jpg */; };
@@ -68,6 +73,11 @@
 		836AF16CBDA25674EBD05178 /* Pods_MiButaca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiButaca.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9749CB0AE8309DCFBD84B395 /* Pods-MiButacaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiButacaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiButacaUITests/Pods-MiButacaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE46DD4EEE6FDB4089D64057 /* Pods-MiButacaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiButacaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiButacaTests/Pods-MiButacaTests.release.xcconfig"; sourceTree = "<group>"; };
+		C35064511FEBAB550010617B /* SearchMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieTableViewCell.swift; sourceTree = "<group>"; };
+		C35064531FEBBBD10010617B /* SearchMovieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieTableViewController.swift; sourceTree = "<group>"; };
+		C35064551FEBC3790010617B /* SearchMovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieController.swift; sourceTree = "<group>"; };
+		C35064591FEBC64B0010617B /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		C3622B7F1FEAC7C600012284 /* ItunesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesService.swift; sourceTree = "<group>"; };
 		C3659F1D1FE7DCF0002EB461 /* movies.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = movies.jpeg; path = imagenes/movies.jpeg; sourceTree = SOURCE_ROOT; };
 		C3659F1E1FE7DCF1002EB461 /* TV-Shows.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "TV-Shows.jpg"; path = "imagenes/TV-Shows.jpg"; sourceTree = SOURCE_ROOT; };
 		C3659F211FE7DDC3002EB461 /* proyector.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = proyector.jpg; path = imagenes/proyector.jpg; sourceTree = SOURCE_ROOT; };
@@ -148,6 +158,41 @@
 				C8083973607ECBE8E672D1AD /* Pods-MiButacaUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C35064501FEBAB0E0010617B /* searchMovieTable */ = {
+			isa = PBXGroup;
+			children = (
+				C35064511FEBAB550010617B /* SearchMovieTableViewCell.swift */,
+				C35064531FEBBBD10010617B /* SearchMovieTableViewController.swift */,
+			);
+			path = searchMovieTable;
+			sourceTree = "<group>";
+		};
+		C3622B811FEAC7D200012284 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				C3622B7F1FEAC7C600012284 /* ItunesService.swift */,
+				F37B801A1FD98F3900558E5E /* FirebaseData.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		C3622B821FEAC7E700012284 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				C3659F341FE826EA002EB461 /* Movie.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		C3622B831FEAC80200012284 /* coredata */ = {
+			isa = PBXGroup;
+			children = (
+				F37B7FDD1FD93FB400558E5E /* MiButaca.xcdatamodeld */,
+				C3659F3A1FE948BD002EB461 /* CoreDataManage.swift */,
+			);
+			path = coredata;
 			sourceTree = "<group>";
 		};
 		C3659F311FE82261002EB461 /* moviesTable */ = {
@@ -253,6 +298,7 @@
 				F37B800D1FD955FB00558E5E /* LoginViewController.swift */,
 				C3659F231FE7DF3B002EB461 /* HomeViewController.swift */,
 				C3659F311FE82261002EB461 /* moviesTable */,
+				C35064501FEBAB0E0010617B /* searchMovieTable */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -260,10 +306,9 @@
 		F37B80191FD98EF600558E5E /* model */ = {
 			isa = PBXGroup;
 			children = (
-				F37B801A1FD98F3900558E5E /* FirebaseData.swift */,
-				C3659F341FE826EA002EB461 /* Movie.swift */,
-				C3659F3A1FE948BD002EB461 /* CoreDataManage.swift */,
-				F37B7FDD1FD93FB400558E5E /* MiButaca.xcdatamodeld */,
+				C3622B831FEAC80200012284 /* coredata */,
+				C3622B821FEAC7E700012284 /* entity */,
+				C3622B811FEAC7D200012284 /* network */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -273,6 +318,8 @@
 			children = (
 				F37B801D1FD990DA00558E5E /* LoginController.swift */,
 				C3659F361FE90D05002EB461 /* MoviesTableController.swift */,
+				C35064551FEBC3790010617B /* SearchMovieController.swift */,
+				C35064591FEBC64B0010617B /* BaseController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -436,12 +483,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MiButaca/Pods-MiButaca-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -590,13 +639,18 @@
 				C3659F301FE82040002EB461 /* MoviesTableViewCell.swift in Sources */,
 				C3659F371FE90D05002EB461 /* MoviesTableController.swift in Sources */,
 				F37B80101FD958EC00558E5E /* Extensions.swift in Sources */,
+				C35064521FEBAB550010617B /* SearchMovieTableViewCell.swift in Sources */,
 				C3659F3B1FE948BD002EB461 /* CoreDataManage.swift in Sources */,
 				F37B801E1FD990DA00558E5E /* LoginController.swift in Sources */,
 				F37B800E1FD955FB00558E5E /* LoginViewController.swift in Sources */,
 				F37B7FDF1FD93FB400558E5E /* MiButaca.xcdatamodeld in Sources */,
+				C3622B801FEAC7C600012284 /* ItunesService.swift in Sources */,
 				F37B801B1FD98F3900558E5E /* FirebaseData.swift in Sources */,
+				C350645A1FEBC64B0010617B /* BaseController.swift in Sources */,
 				C3659F241FE7DF3B002EB461 /* HomeViewController.swift in Sources */,
+				C35064561FEBC3790010617B /* SearchMovieController.swift in Sources */,
 				F37B7FD71FD93FB400558E5E /* AppDelegate.swift in Sources */,
+				C35064541FEBBBD10010617B /* SearchMovieTableViewController.swift in Sources */,
 				C3659F331FE8229C002EB461 /* MoviesTableViewController.swift in Sources */,
 				C3659F351FE826EA002EB461 /* Movie.swift in Sources */,
 				C3659F281FE7DFB3002EB461 /* Constants.swift in Sources */,
