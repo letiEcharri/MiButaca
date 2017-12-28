@@ -9,8 +9,8 @@
 import UIKit
 
 protocol SpinnerProtocol {
-    func createSubviewSpinner()
-    func stopSpinner()
+    func start()
+    func stop()
 }
 
 class Spinner: SpinnerProtocol{
@@ -20,7 +20,7 @@ class Spinner: SpinnerProtocol{
         self.superView = superView
     }
     
-    func createSubviewSpinner(){
+    func start(){
         let screenBound = superView.view.bounds
         let myView = UIView(frame: CGRect(x: 0, y: 0, width: screenBound.width, height: screenBound.height))
         myView.backgroundColor = UIColor.black
@@ -30,7 +30,7 @@ class Spinner: SpinnerProtocol{
         myView.spinner()
     }
     
-    func stopSpinner(){
+    func stop(){
         for subview in superView.view.subviews{
             if subview.tag == 100{
                 subview.removeFromSuperview()

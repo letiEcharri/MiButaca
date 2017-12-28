@@ -12,6 +12,8 @@ class MoviesTableViewController: UITableViewController {
     
     var movies: [Movie] = [Movie]()
     let cellName = Constants.cellsNames.movieCell
+    var rowNumber: Int = 0
+    var movieIDdescription = ""
     
     override func viewWillAppear(_ animated: Bool) {
         //Get movies from coredata
@@ -41,6 +43,14 @@ class MoviesTableViewController: UITableViewController {
         }
     }
     
+    func reloadData(){
+        DispatchQueue.main.async{
+            self.tableView.reloadData()
+            print("")
+        }
+    }
+    
+    
 
     // MARK: - Table view data source
 
@@ -57,10 +67,22 @@ class MoviesTableViewController: UITableViewController {
         cell.display(gender: movies[indexPath.row].gender)
         cell.display(score: movies[indexPath.row].score)
         
+        cell.save(id: movies[indexPath.row].id)
+        cell.save(idFirebase: movies[indexPath.row].idFirebase)
+        
         let image: UIImage = movies[indexPath.row].picture.loadImageFromURL()
         cell.display(image: image)
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        movieIDdescription = movies[indexPath.row].id
+        
+        DispatchQueue.main.async{
+            self.performSegue(withIdentifier: Constants.segue.MoviesToDescription, sender: nil)
+        }
+        //print(cell.idMovie)
     }
     
 
@@ -99,14 +121,22 @@ class MoviesTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == Constants.segue.MoviesToDescription{
+            let view: DescriptionViewController = segue.destination as! DescriptionViewController
+            
+            let controller: DescriptionProtocol = DescriptionController(view: view)
+            view.score = controller.getScore(idMovie: movieIDdescription)
+            
+            let moviesController: MoviesTableProtocol = MoviesTableController(view: self)
+            moviesController.getMovieDescription(movieID: movieIDdescription, controller: controller as! DescriptionController)
+        }
     }
-    */
+    
 
 }

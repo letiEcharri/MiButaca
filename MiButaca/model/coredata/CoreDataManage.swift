@@ -13,6 +13,7 @@ protocol CoreDataProtocol {
     func saveMovie(movie: Movie)
     func fetchMovies() -> [Movie]
     func deleteAllRecords(entity: String)
+    func fetchOneMovie(id: String) -> Movie
 }
 
 class CoreDataManage: CoreDataProtocol {
@@ -31,6 +32,7 @@ class CoreDataManage: CoreDataProtocol {
         transc.setValue(movie.gender, forKey: Constants.databases.gender)
         transc.setValue(movie.picture, forKey: Constants.databases.image)
         transc.setValue(movie.score, forKey: Constants.databases.score)
+        transc.setValue(movie.idFirebase, forKey: Constants.databases.idFirebase)
         
         //save the object
         do {
@@ -52,7 +54,7 @@ class CoreDataManage: CoreDataProtocol {
             let fetchedResults = try getContext().fetch(fetchRequest)
             if fetchedResults.count > 0 {
                 for item in fetchedResults{
-                    let cMovie = Movie(id: item.id!, title: item.title!, gender: item.gender!, picture: item.image!, score: Int(item.score))
+                    let cMovie = Movie(id: item.id!, idFirebase: item.idFirebase!, title: item.title!, gender: item.gender!, picture: item.image!, score: Int(item.score))
                     movies.append(cMovie)
                 }
                 
@@ -79,6 +81,29 @@ class CoreDataManage: CoreDataProtocol {
         } catch {
             print ("There was an error")
         }
+    }
+    
+    func fetchOneMovie(id: String) -> Movie{
+        var movie: Movie = Movie(id: "", idFirebase: "", title: "", gender: "", picture: "", score: 0)
+        
+        let fetchRequest = NSFetchRequest<MovieDC>(entityName: movieEntity)
+        
+        do {
+            let fetchedResults = try getContext().fetch(fetchRequest)
+            if fetchedResults.count > 0 {
+                for item in fetchedResults{
+                    if item.id == id{
+                        movie = Movie(id: item.id!, idFirebase: item.idFirebase!, title: item.title!, gender: item.gender!, picture: item.image!, score: Int(item.score))
+                    }
+                }
+                
+            }
+        } catch let error as NSError {
+            // something went wrong, print the error.
+            print(error.description)
+        }
+        
+        return movie
     }
     
     func getContext () -> NSManagedObjectContext {

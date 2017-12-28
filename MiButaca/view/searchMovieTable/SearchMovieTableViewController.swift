@@ -25,7 +25,7 @@ class SearchMovieTableViewController: UITableViewController, UISearchBarDelegate
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let spinner: SpinnerProtocol = Spinner(superView: self)
-        spinner.createSubviewSpinner()
+        spinner.start()
         
         let text: String = searchBar.text!
         
@@ -35,15 +35,15 @@ class SearchMovieTableViewController: UITableViewController, UISearchBarDelegate
     
     func reloadData(movies: [Movie]){
         self.movies = movies
+        self.tableView.reloadData()
         
         let spinner: SpinnerProtocol = Spinner(superView: self)
-        spinner.stopSpinner()
+        spinner.stop()
         
-        tableView.reloadData()
+        //Hide keyboard
+        searchBar.resignFirstResponder()
     }
-    
-    
-    
+
     
 
     // MARK: - Table view data source

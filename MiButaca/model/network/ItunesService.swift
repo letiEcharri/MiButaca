@@ -10,14 +10,14 @@ import UIKit
 import Alamofire
 
 protocol ItunesServiceProtocol {
-    func getMoviesFromItunes(movie: String, controller: SearchMovieController)
+    func getMoviesFromItunes(movie: String, controller: BaseController)
 }
 
 class ItunesService: ItunesServiceProtocol {
     
     let constants = Constants.itunes.self
     
-    func getMoviesFromItunes(movie: String, controller: SearchMovieController){
+    func getMoviesFromItunes(movie: String, controller: BaseController){
         var movies: [Movie] = [Movie]()
         let url = "\(constants.baseURL)\(constants.entityMovieParam)&term=\(movie.cleanSpaces())"
         
@@ -40,8 +40,18 @@ class ItunesService: ItunesServiceProtocol {
                                 }
                                 let image: String = movieDict.value(forKey: "artworkUrl100") as! String
                                 
+                                let preDate: String = movieDict.value(forKey: "releaseDate") as! String
+                                let date1 = preDate.split(separator: "T")
+                                let date2: String = String(date1[0])
+                                let date: Date = date2.stringToDate()
+                                
+                                let country: String = movieDict.value(forKey: "country") as! String
+                                let resume: String = movieDict.value(forKey: "longDescription") as! String
+                                
+                                
+                                
                                 //Add movie
-                                let item = Movie(id: String(id), title: name, gender: genre, picture: image, score: 0)
+                                let item = Movie(id: String(id), idFirebase: "", title: name, gender: genre, picture: image, score: 0, date: date, country: country, resume: resume)
                                 
                                 movies.append(item)
                             }

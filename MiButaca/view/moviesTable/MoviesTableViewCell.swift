@@ -13,10 +13,14 @@ protocol MoviesViewCellProtocol {
     func display(gender: String)
     func display(image: UIImage)
     func display(score: Int)
+    func save(id: String)
+    func save(idFirebase: String)
 }
 
 class MoviesTableViewCell: UITableViewCell {
     
+    var idMovie: String = ""
+    var idFirebase: String = ""
     @IBOutlet weak var imgPicture: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblGender: UILabel!
@@ -58,10 +62,18 @@ extension MoviesTableViewCell: MoviesViewCellProtocol{
     func display(score: Int) {
         for button in btnsStar{
             if button.tag <= score{
-                button.isHidden = false
+                button.setImage(UIImage().fullStar(), for: .normal)
             }else{
-                button.isHidden = true
+                button.setImage(UIImage().emptyStar(), for: .normal)
             }
         }
+    }
+    
+    func save(id: String){
+        idMovie = id
+    }
+    
+    func save(idFirebase: String){
+        self.idFirebase = idFirebase
     }
 }

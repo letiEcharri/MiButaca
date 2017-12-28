@@ -51,4 +51,33 @@ extension String{
     func cleanSpaces() -> String{
         return self.replacingOccurrences(of: " ", with: "+")
     }
+    
+    func stringToDate() -> Date{
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        formatter.timeZone = TimeZone(abbreviation: "GMT+0:00")
+        let date = formatter.date(from: self)
+        
+        return date!
+    }
+}
+
+extension UIImage{
+    func fullStar() -> UIImage{
+        return UIImage(named: "star.jpeg")!
+    }
+    
+    func emptyStar() -> UIImage{
+        return UIImage(named: "emptyStar.jpg")!
+    }
+}
+
+extension Date{
+    func toString() -> String{
+        let formatter = DateFormatter()
+        formatter.dateFormat = "d MMM yyyy"
+        let newDate = formatter.string(from: self)
+        
+        return newDate
+    }
 }

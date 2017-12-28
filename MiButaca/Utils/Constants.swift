@@ -18,11 +18,13 @@ struct Constants {
         static let LoginToHome = "segueLoginToHome"
         static let HomeToMovies = "segueHomeToMovies"
         static let MoviesToSearch = "segueMoviesToSearch"
+        static let MoviesToDescription = "segueMoviesToDescription"
     }
     
     struct userDefaults {
         static let user = "user"
         static let userID = "userID"
+        static let movieRow = "movieRow"
     }
     
     struct databases {
@@ -35,6 +37,7 @@ struct Constants {
         static let score = "score"
         static let nick = "nick"
         static let password = "password"
+        static let idFirebase = "idFirebase"
     }
     
     struct coredataEntities {

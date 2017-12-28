@@ -11,10 +11,12 @@ import FirebaseDatabase
 
 protocol FirebaseDataProtocol {
     func firebaseLogin(user: String, pass: String, view: LoginViewController)
-    func firebaseGetMovies(controller: MoviesTableProtocol)
+    func firebaseGetMovies(controller: BaseController)
+    func updateScore(controller: BaseController, movieID: String, score: Int)
 }
 
 class FirebaseData: FirebaseDataProtocol {
+    
     var ref: DatabaseReference!
     var tableUsers = "users"
     
@@ -76,7 +78,7 @@ class FirebaseData: FirebaseDataProtocol {
         
     }
     
-    func firebaseGetMovies(controller: MoviesTableProtocol){
+    func firebaseGetMovies(controller: BaseController){
         let user: String = UserDefaults.standard.value(forKey: Constants.userDefaults.userID) as! String
         let fireMovies: String = "\(tableUsers)/\(user)/movies"
         ref = Database.database().reference()
@@ -88,6 +90,8 @@ class FirebaseData: FirebaseDataProtocol {
             
             for child in array{
                 let snap = child as! DataSnapshot
+                let idFirebase: String = snap.key
+                
                 if snap.value is NSDictionary{
                     let data: NSDictionary = snap.value as! NSDictionary
                     
@@ -98,29 +102,29 @@ class FirebaseData: FirebaseDataProtocol {
                     var score: Int = 0
                     
                     for i in data{
-                        if i.key as! String == "id"{
+                        if i.key as! String == Constants.databases.id{
                             id = i.value as! String
                         }
                         
-                        if i.key as! String == "title"{
+                        if i.key as! String == Constants.databases.title{
                             title = i.value as! String
                         }
                         
-                        if i.key as! String == "gender"{
+                        if i.key as! String == Constants.databases.gender{
                             gender = i.value as! String
                         }
                         
-                        if i.key as! String == "image"{
+                        if i.key as! String == Constants.databases.image{
                             image = i.value as! String
                         }
                         
-                        if i.key as! String == "score"{
+                        if i.key as! String == Constants.databases.score{
                             score = i.value as! Int
                         }
                     }
                     
                     //Save in the device
-                    let movie = Movie(id: id, title: title, gender: gender, picture: image, score: score)
+                    let movie = Movie(id: id, idFirebase: idFirebase, title: title, gender: gender, picture: image, score: score)
                     let coredata: CoreDataProtocol = CoreDataManage()
                     coredata.saveMovie(movie: movie)
                     
@@ -128,9 +132,26 @@ class FirebaseData: FirebaseDataProtocol {
             }
             
             
-            controller.moviesSaved()
+            controller.serviceResponse(reponse: true as AnyObject)
         })
         
+    }
+    
+    func updateScore(controller: BaseController, movieID: String, score: Int){
+        let user: String = UserDefaults.standard.value(forKey: Constants.userDefaults.userID) as! String
+        let fireMovies: String = "\(tableUsers)/\(user)/movies/\(movieID)"
+        ref = Database.database().reference()
+        
+        ref.child(fireMovies).updateChildValues(["score": score])
+        
+        //Update Core Data
+        let coredata: CoreDataProtocol = CoreDataManage()
+        coredata.deleteAllRecords(entity: Constants.coredataEntities.movies)
+        
+        firebaseGetMovies(controller: controller)
+        
+        //Response
+        controller.serviceResponse(reponse: true as AnyObject)
     }
     
     

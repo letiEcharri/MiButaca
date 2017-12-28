@@ -9,30 +9,44 @@
 import UIKit
 
 protocol MoviesTableProtocol {
-    func getMovies()
-    func moviesSaved()
     func getMoviesFromDevice()->[Movie]
+    func update(score: Int, firebaseID: String)
+    func getMovieDescription(movieID: String, controller: DescriptionController)
 }
 
 class MoviesTableController: MoviesTableProtocol {
-    var view: UIViewController
+    var view: MoviesTableViewController
     
-    init(view: UIViewController) {
+    init(view: MoviesTableViewController) {
         self.view = view
-    }
-    
-    func getMovies(){
-        let model: FirebaseDataProtocol = FirebaseData()
-        model.firebaseGetMovies(controller: self)
-    }
-    
-    func moviesSaved(){
-        let myView: HomeViewController = view as! HomeViewController
-        myView.goToMovies()
     }
     
     func getMoviesFromDevice()->[Movie]{
         let coredata: CoreDataProtocol = CoreDataManage()
         return coredata.fetchMovies()
     }
+    
+    func update(score: Int, firebaseID: String){
+        let model: FirebaseDataProtocol = FirebaseData()
+        model.updateScore(controller: self, movieID: firebaseID, score: score)
+    }
+    
+    func getMovieDescription(movieID: String, controller: DescriptionController){
+        let itunes: ItunesServiceProtocol = ItunesService()
+        itunes.getMoviesFromItunes(movie: movieID, controller: controller)
+    }
 }
+
+extension MoviesTableController: BaseController{
+    func serviceResponse(reponse: AnyObject) {
+        view.movies = getMoviesFromDevice()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
+            self.view.reloadData()
+        }
+        
+        
+    }
+}
+
+

@@ -25,12 +25,12 @@ class HomeViewController: UIViewController {
     
     @IBAction func moviesAction(_ sender: CustomHomeButton) {
         let spinner: SpinnerProtocol = Spinner(superView: self)
-        spinner.createSubviewSpinner()
+        spinner.start()
         
         let coredata: CoreDataProtocol = CoreDataManage()
         coredata.deleteAllRecords(entity: Constants.coredataEntities.movies)
         
-        let controller: MoviesTableProtocol = MoviesTableController(view: self)
+        let controller: HomeProtocol = HomeController(view: self)
         controller.getMovies()
     }
     
@@ -51,7 +51,7 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.segue.HomeToMovies{
             let spinner: SpinnerProtocol = Spinner(superView: self)
-            spinner.stopSpinner()
+            spinner.stop()
         }
     }
 
