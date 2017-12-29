@@ -10,6 +10,7 @@
 		07F34817B7B010FF2C1F333A /* Pods_MiButaca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836AF16CBDA25674EBD05178 /* Pods_MiButaca.framework */; };
 		4AD1AC84CFB430D836D54400 /* Pods_MiButacaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065A39FF94C49D5DEE1AE714 /* Pods_MiButacaUITests.framework */; };
 		C33115A91FF4F0E8007416CB /* DescriptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33115A81FF4F0E8007416CB /* DescriptionController.swift */; };
+		C333DE551FF554C50018B110 /* TrailerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C333DE541FF554C50018B110 /* TrailerViewController.swift */; };
 		C345827D1FF39BBE00FE518F /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C345827C1FF39BBE00FE518F /* Spinner.swift */; };
 		C345827F1FF3AC0000FE518F /* emptyStar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C345827E1FF3ABFF00FE518F /* emptyStar.jpg */; };
 		C34582811FF3F8EB00FE518F /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34582801FF3F8EB00FE518F /* HomeController.swift */; };
@@ -33,6 +34,7 @@
 		C3659F371FE90D05002EB461 /* MoviesTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3659F361FE90D05002EB461 /* MoviesTableController.swift */; };
 		C3659F391FE92668002EB461 /* noImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3659F381FE92667002EB461 /* noImage.jpg */; };
 		C3659F3B1FE948BD002EB461 /* CoreDataManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3659F3A1FE948BD002EB461 /* CoreDataManage.swift */; };
+		C3B408D81FF64ECD00A7FAC2 /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B408D71FF64ECC00A7FAC2 /* favorite.png */; };
 		EE4DB1687260A711272F6EBB /* Pods_MiButacaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47782201FAD7417E9EFB6DBF /* Pods_MiButacaTests.framework */; };
 		F37B7FD71FD93FB400558E5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B7FD61FD93FB400558E5E /* AppDelegate.swift */; };
 		F37B7FDC1FD93FB400558E5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F37B7FDA1FD93FB400558E5E /* Main.storyboard */; };
@@ -79,6 +81,7 @@
 		9749CB0AE8309DCFBD84B395 /* Pods-MiButacaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiButacaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiButacaUITests/Pods-MiButacaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE46DD4EEE6FDB4089D64057 /* Pods-MiButacaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiButacaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiButacaTests/Pods-MiButacaTests.release.xcconfig"; sourceTree = "<group>"; };
 		C33115A81FF4F0E8007416CB /* DescriptionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionController.swift; sourceTree = "<group>"; };
+		C333DE541FF554C50018B110 /* TrailerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerViewController.swift; sourceTree = "<group>"; };
 		C345827C1FF39BBE00FE518F /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		C345827E1FF3ABFF00FE518F /* emptyStar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = emptyStar.jpg; path = imagenes/emptyStar.jpg; sourceTree = SOURCE_ROOT; };
 		C34582801FF3F8EB00FE518F /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -103,6 +106,7 @@
 		C3659F381FE92667002EB461 /* noImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = noImage.jpg; path = imagenes/noImage.jpg; sourceTree = SOURCE_ROOT; };
 		C3659F3A1FE948BD002EB461 /* CoreDataManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManage.swift; sourceTree = "<group>"; };
 		C3990755CD1B6DCD3FE4E39F /* Pods-MiButaca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiButaca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiButaca/Pods-MiButaca.debug.xcconfig"; sourceTree = "<group>"; };
+		C3B408D71FF64ECC00A7FAC2 /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = favorite.png; path = imagenes/favorite.png; sourceTree = SOURCE_ROOT; };
 		C8083973607ECBE8E672D1AD /* Pods-MiButacaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiButacaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiButacaUITests/Pods-MiButacaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F37B7FD31FD93FB400558E5E /* MiButaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiButaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37B7FD61FD93FB400558E5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -295,6 +299,7 @@
 		F37B80071FD9410E00558E5E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C3B408D71FF64ECC00A7FAC2 /* favorite.png */,
 				C345827E1FF3ABFF00FE518F /* emptyStar.jpg */,
 				C3659F381FE92667002EB461 /* noImage.jpg */,
 				C3659F2D1FE81DA3002EB461 /* star.jpeg */,
@@ -320,6 +325,7 @@
 				C3659F311FE82261002EB461 /* moviesTable */,
 				C35064501FEBAB0E0010617B /* searchMovieTable */,
 				C34582821FF40BF100FE518F /* DescriptionViewController.swift */,
+				C333DE541FF554C50018B110 /* TrailerViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -470,6 +476,7 @@
 				F37B80091FD9413C00558E5E /* butaca.jpg in Resources */,
 				C3659F201FE7DCF1002EB461 /* TV-Shows.jpg in Resources */,
 				F37B7FE11FD93FB400558E5E /* Assets.xcassets in Resources */,
+				C3B408D81FF64ECD00A7FAC2 /* favorite.png in Resources */,
 				C3659F1F1FE7DCF1002EB461 /* movies.jpeg in Resources */,
 				C345827F1FF3AC0000FE518F /* emptyStar.jpg in Resources */,
 				F37B80121FD95FD900558E5E /* icons8-user-32.png in Resources */,
@@ -682,6 +689,7 @@
 				C3659F331FE8229C002EB461 /* MoviesTableViewController.swift in Sources */,
 				C3659F351FE826EA002EB461 /* Movie.swift in Sources */,
 				C3659F281FE7DFB3002EB461 /* Constants.swift in Sources */,
+				C333DE551FF554C50018B110 /* TrailerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -849,7 +857,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8QNY2HGLUP;
 				INFOPLIST_FILE = MiButaca/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.MiButaca;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -864,7 +874,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8QNY2HGLUP;
 				INFOPLIST_FILE = MiButaca/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.MiButaca;
 				PRODUCT_NAME = "$(TARGET_NAME)";

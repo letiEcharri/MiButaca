@@ -13,7 +13,9 @@ class MoviesTableViewController: UITableViewController {
     var movies: [Movie] = [Movie]()
     let cellName = Constants.cellsNames.movieCell
     var rowNumber: Int = 0
+    var rowIndex: IndexPath = IndexPath()
     var movieIDdescription = ""
+    var movieIDFirebase = ""
     
     override func viewWillAppear(_ animated: Bool) {
         //Get movies from coredata
@@ -26,6 +28,10 @@ class MoviesTableViewController: UITableViewController {
         
         //Add Search right button
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchAction(sender:)))
+        
+        //Add Search left button
+        navigationItem.leftBarButtonItem =
+        UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(goToHome(sender:)))
     }
     
     override func viewDidLoad() {
@@ -47,6 +53,18 @@ class MoviesTableViewController: UITableViewController {
         DispatchQueue.main.async{
             self.tableView.reloadData()
             print("")
+        }
+    }
+    
+    func goToDescription(){
+        DispatchQueue.main.async{
+            self.performSegue(withIdentifier: Constants.segue.MoviesToDescription, sender: nil)
+        }
+    }
+    
+    @objc func goToHome(sender: UIBarButtonItem){
+        DispatchQueue.main.async{
+            self.performSegue(withIdentifier: Constants.segue.MoviesToHome, sender: nil)
         }
     }
     
@@ -78,11 +96,10 @@ class MoviesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         movieIDdescription = movies[indexPath.row].id
+        rowIndex = indexPath
+        movieIDFirebase = movies[indexPath.row].idFirebase
         
-        DispatchQueue.main.async{
-            self.performSegue(withIdentifier: Constants.segue.MoviesToDescription, sender: nil)
-        }
-        //print(cell.idMovie)
+        goToDescription()
     }
     
 
@@ -126,15 +143,18 @@ class MoviesTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        tableView.deselectRow(at: rowIndex, animated: true)
         
         if segue.identifier == Constants.segue.MoviesToDescription{
             let view: DescriptionViewController = segue.destination as! DescriptionViewController
             
-            let controller: DescriptionProtocol = DescriptionController(view: view)
-            view.score = controller.getScore(idMovie: movieIDdescription)
+            view.idMovie = movieIDdescription
+            view.idFirebase = movieIDFirebase
+            view.moviesView = self
+        }else if segue.identifier == Constants.segue.MoviesToSearch{
+            let view: SearchMovieTableViewController = segue.destination as! SearchMovieTableViewController
             
-            let moviesController: MoviesTableProtocol = MoviesTableController(view: self)
-            moviesController.getMovieDescription(movieID: movieIDdescription, controller: controller as! DescriptionController)
+            view.moviesView = self
         }
     }
     

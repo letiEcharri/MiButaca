@@ -26,7 +26,7 @@ class HomeController: HomeProtocol {
 }
 
 extension HomeController: BaseController{
-    func serviceResponse(reponse: AnyObject) {
+    func serviceResponse(response: AnyObject) {
         view.goToMovies()
     }
 }

@@ -20,6 +20,7 @@ struct Movie {
     var date: Date = Date()
     var country: String = ""
     var resume: String = ""
+    var trailer: String = ""
     
     //Movies list
     init(id: String, idFirebase: String, title: String, gender: String, picture: String, score: Int) {
@@ -32,7 +33,7 @@ struct Movie {
     }
     
     //Movie Description
-    init(id: String, idFirebase: String, title: String, gender: String, picture: String, score: Int, date: Date, country: String, resume: String) {
+    init(id: String, idFirebase: String, title: String, gender: String, picture: String, score: Int, date: Date, country: String, resume: String, trailer: String) {
         self.id = id
         self.idFirebase = idFirebase
         self.title = title
@@ -42,5 +43,6 @@ struct Movie {
         self.date = date
         self.country = country
         self.resume = resume
+        self.trailer = trailer
     }
 }

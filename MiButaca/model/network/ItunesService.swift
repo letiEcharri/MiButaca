@@ -48,10 +48,13 @@ class ItunesService: ItunesServiceProtocol {
                                 let country: String = movieDict.value(forKey: "country") as! String
                                 let resume: String = movieDict.value(forKey: "longDescription") as! String
                                 
-                                
+                                var trailer = ""
+                                if movieDict.value(forKey: "previewUrl") != nil{
+                                    trailer = movieDict.value(forKey: "previewUrl") as! String
+                                }
                                 
                                 //Add movie
-                                let item = Movie(id: String(id), idFirebase: "", title: name, gender: genre, picture: image, score: 0, date: date, country: country, resume: resume)
+                                let item = Movie(id: String(id), idFirebase: "", title: name, gender: genre, picture: image, score: 0, date: date, country: country, resume: resume, trailer: trailer)
                                 
                                 movies.append(item)
                             }
@@ -61,7 +64,7 @@ class ItunesService: ItunesServiceProtocol {
                 
                 OperationQueue.main.addOperation({
                     //calling another function after fetching the json
-                    controller.serviceResponse(reponse: movies as AnyObject)
+                    controller.serviceResponse(response: movies as AnyObject)
                 })
                 
                 
@@ -69,6 +72,7 @@ class ItunesService: ItunesServiceProtocol {
             
         }
     }
+    
 }
 
 

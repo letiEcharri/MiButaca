@@ -12,7 +12,8 @@ import FirebaseDatabase
 protocol FirebaseDataProtocol {
     func firebaseLogin(user: String, pass: String, view: LoginViewController)
     func firebaseGetMovies(controller: BaseController)
-    func updateScore(controller: BaseController, movieID: String, score: Int)
+    func updateScore(controller: BaseController, firebaseID: String, score: Int)
+    func save(movie: Movie)
 }
 
 class FirebaseData: FirebaseDataProtocol {
@@ -132,26 +133,34 @@ class FirebaseData: FirebaseDataProtocol {
             }
             
             
-            controller.serviceResponse(reponse: true as AnyObject)
+            controller.serviceResponse(response: true as AnyObject)
         })
         
     }
     
-    func updateScore(controller: BaseController, movieID: String, score: Int){
+    func updateScore(controller: BaseController, firebaseID: String, score: Int){
         let user: String = UserDefaults.standard.value(forKey: Constants.userDefaults.userID) as! String
-        let fireMovies: String = "\(tableUsers)/\(user)/movies/\(movieID)"
+        let fireMovies: String = "\(tableUsers)/\(user)/movies/\(firebaseID)"
+        print(fireMovies)
         ref = Database.database().reference()
         
-        ref.child(fireMovies).updateChildValues(["score": score])
-        
-        //Update Core Data
-        let coredata: CoreDataProtocol = CoreDataManage()
-        coredata.deleteAllRecords(entity: Constants.coredataEntities.movies)
-        
-        firebaseGetMovies(controller: controller)
+        ref.child(fireMovies).updateChildValues([Constants.databases.score: score])
         
         //Response
-        controller.serviceResponse(reponse: true as AnyObject)
+        controller.serviceResponse(response: true as AnyObject)
+    }
+    
+    func save(movie: Movie){
+        let user: String = UserDefaults.standard.value(forKey: Constants.userDefaults.userID) as! String
+        
+        let fireMovies: String = "\(tableUsers)/\(user)/movies/\(movie.id)"
+        ref = Database.database().reference()
+        let properties = [Constants.databases.id : movie.id,
+                          Constants.databases.title : movie.title,
+                          Constants.databases.image : movie.picture,
+                          Constants.databases.gender : movie.gender,
+                          Constants.databases.score : 0] as [String : Any]
+        ref.child(fireMovies).updateChildValues(properties)
     }
     
     

@@ -14,6 +14,7 @@ protocol CoreDataProtocol {
     func fetchMovies() -> [Movie]
     func deleteAllRecords(entity: String)
     func fetchOneMovie(id: String) -> Movie
+    func updateMovie(key: String, value: Any, idMovie: String)
 }
 
 class CoreDataManage: CoreDataProtocol {
@@ -104,6 +105,25 @@ class CoreDataManage: CoreDataProtocol {
         }
         
         return movie
+    }
+    
+    func updateMovie(key: String, value: Any, idMovie: String){
+        let fetchRequest = NSFetchRequest<MovieDC>(entityName: movieEntity)
+        
+        do {
+            let fetchedResults = try getContext().fetch(fetchRequest)
+            if fetchedResults.count > 0 {
+                for item in fetchedResults{
+                    if item.id == idMovie{
+                        item.setValue(value, forKey: key)
+                    }
+                }
+                
+            }
+        } catch let error as NSError {
+            // something went wrong, print the error.
+            print(error.description)
+        }
     }
     
     func getContext () -> NSManagedObjectContext {

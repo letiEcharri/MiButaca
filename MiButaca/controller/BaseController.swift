@@ -9,5 +9,5 @@
 import UIKit
 
 protocol BaseController {
-    func serviceResponse(reponse: AnyObject)
+    func serviceResponse(response: AnyObject)
 }

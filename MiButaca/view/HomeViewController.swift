@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
 
         navigationController?.navigationBar.tintColor = UIColor.black
         self.title = Constants.appName
+        self.navigationItem.hidesBackButton = true
     }
 
     @IBAction func logout(_ sender: UIBarButtonItem) {

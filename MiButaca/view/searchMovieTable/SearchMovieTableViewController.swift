@@ -13,6 +13,10 @@ class SearchMovieTableViewController: UITableViewController, UISearchBarDelegate
     @IBOutlet weak var searchBar: UISearchBar!
     
     var movies: [Movie] = [Movie]()
+    var idMovie: String = ""
+    var rowMovie: Int = 0
+    
+    var moviesView: MoviesTableViewController = MoviesTableViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +25,12 @@ class SearchMovieTableViewController: UITableViewController, UISearchBarDelegate
         self.title = Constants.buscarPeli
         searchBar.delegate = self
         
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if isMovingFromParentViewController{
+            moviesView.tableView.reloadData()
+        }
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -43,6 +53,13 @@ class SearchMovieTableViewController: UITableViewController, UISearchBarDelegate
         //Hide keyboard
         searchBar.resignFirstResponder()
     }
+    
+    func goToDescription(){
+        DispatchQueue.main.async{
+            self.performSegue(withIdentifier: Constants.segue.SearchToDescription, sender: nil)
+        }
+    }
+    
 
     
 
@@ -71,6 +88,12 @@ class SearchMovieTableViewController: UITableViewController, UISearchBarDelegate
         cell.display(image: image)
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        idMovie = movies[indexPath.row].id
+        rowMovie = indexPath.row
+        goToDescription()
     }
     
 
@@ -109,14 +132,19 @@ class SearchMovieTableViewController: UITableViewController, UISearchBarDelegate
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == Constants.segue.SearchToDescription{
+            let view: DescriptionViewController = segue.destination as! DescriptionViewController
+            
+            view.idMovie = idMovie
+            view.imageString = movies[rowMovie].picture
+            view.showStars = false
+        }
     }
-    */
+    
 
 }

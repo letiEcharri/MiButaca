@@ -17,8 +17,11 @@ struct Constants {
     struct segue {
         static let LoginToHome = "segueLoginToHome"
         static let HomeToMovies = "segueHomeToMovies"
+        static let MoviesToHome = "segueMoviesToHome"
         static let MoviesToSearch = "segueMoviesToSearch"
         static let MoviesToDescription = "segueMoviesToDescription"
+        static let DescriptionToTrailer = "segueDescriptionToTrailer"
+        static let SearchToDescription = "segueSearchToDescription"
     }
     
     struct userDefaults {

@@ -27,8 +27,8 @@ class SearchMovieController: SearchMovieProtocol {
 }
 
 extension SearchMovieController: BaseController{
-    func serviceResponse(reponse: AnyObject) {
-        let movies: [Movie] = reponse as! [Movie]
+    func serviceResponse(response: AnyObject) {
+        let movies: [Movie] = response as! [Movie]
         view.reloadData(movies: movies)
     }
 }
